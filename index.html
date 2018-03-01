@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   </head>
   <body>
-    <h1>Hjälp mig att välja mellan...</h1>
+    <h1 class="header">Hjälp mig att välja mellan...</h1>
+    <h2 class="headerWinner">och vinnaren är:</h2>
     <div class="inputSection">
       <div class="inputs">
         <input placeholder="Någonting"></input>
@@ -15,17 +16,34 @@
       <button class="addOption">Lägg till</button>
       </div>
       <div class="resultSection"></div>
-    <button>Kör!</button>
+    <button class="submit">Kör!</button>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
       $(function(){
         $('.resultSection').hide()
+        $('.headerWinner').hide()
 
         var add_option = function() {
           $('.inputs').append('<input></input>')
         }
-
         $('.addOption').click(add_option)
+
+        var options = []
+        var submit = function() {
+          $('.inputSection').hide()
+          $('.resultSection').css('display', 'flex')
+
+          $('input').each(function() {
+            options.push($(this).val())
+          })
+
+          var winner = options[Math.floor(Math.random() * options.length)]
+
+          $('.resultSection').text(winner)
+          $('.headerWinner').show()
+          $('.header').hide()
+        }
+        $('.submit').click(submit)
       })
     </script>
   </body>

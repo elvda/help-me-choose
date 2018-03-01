@@ -18,6 +18,16 @@ h1 {
   text-shadow: 1px 1px 1px grey;
 }
 
+h2 {
+  font-weight: lighter;
+  color: #e0ebeb;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-shadow: 1px 1px 1px grey;
+}
+
 .inputSection {
   margin: 50px 0px 80px 0px;
   width: 400px;
@@ -63,4 +73,21 @@ button:hover {
 
 button:active {
   color: grey;
+}
+
+button:hover
+{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
+
+.resultSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  font-size: 35px;
+  color: #e0ebeb;
+  text-shadow: 1px 1px 1px grey;
 }
