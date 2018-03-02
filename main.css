@@ -23,7 +23,7 @@ h2 {
   color: #e0ebeb;
   font-size: 40px;
   letter-spacing: 1px;
-  margin-bottom: 0px;
+  margin-bottom: 100px;
   margin-top: 0px;
   text-shadow: 1px 1px 1px grey;
 }
@@ -86,8 +86,9 @@ button:hover
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 250px;
   font-size: 35px;
   color: #e0ebeb;
   text-shadow: 1px 1px 1px grey;
+  padding: 2%;
+  border-style: dotted;
 }
